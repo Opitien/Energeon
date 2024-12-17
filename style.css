@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.energeon {
+    font-size: 2rem;
+    color: green;
+    text-decoration: none;
+    font-family: 'Bruno Ace', sans-serif !important;
+}
+
+.energeon:hover {
+    color: green;
+}
+
+@font-face {
+  src: url(resources/fonts/Poppins/Poppins-Light.ttf);  
+  font-family: 'Poppins';
+}
+
+@font-face {
+  src: url(resources/fonts/Bruno_Ace/BrunoAce-Regular.ttf);  
+   font-family: 'Bruno Ace';
+}
+
+@font-face {
+    src: url(resources/fonts/Roboto/Roboto-Regular.ttf);  
+     font-family: 'Roboto';
+  }
+
+.nav-link {
+    margin: 10px auto 10px auto;
+    color: green !important;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+.nav-link:hover {
+    color: black !important;
+}
+
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -40px;
+    border: 2px solid rgb(26, 248, 92);
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn0 {
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background:rgb(26, 248, 92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+.main {
+    background: url(./img/bgb.png)no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 85vh;
+    width: 100%;
+    border-radius: 15px;
+    color: #fff;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.main:hover {
+    padding: 20px;
+    background: url(./img/bga.png) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 85vh;
+    width: 100%;
+    color: green;
+    border-radius: 10px;
+}
+
+.main h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Roblox', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.btn1 {
+    height: 45px;
+    width: 35%;
+    border-radius: none;
+    border-color: none;
+    outline: none;
+    background-color: rgba(26, 248, 93, 0.5);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+.btn1:hover {
+    background-color: rgb(12, 173, 60);
+    transition: 0.3s;
+}
+
+.apple {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/OIP.png') no-repeat;
+    border-radius: 20px;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+.news{
+    background-color: black;
+    color: white;
+}
+
+.btn2 {
+    height: 45px;
+    width: 100px;
+    background: white;
+    margin-left: -20px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.news input {
+    height: 45px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    margin-top: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.news::placeholder {
+    color: white;
+}
+
+.news p {
+    margin: 0 !important;
+}
+
+.fab{
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-right: 5px;
+    color: green;
+}
+
+.imgtre {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.imgtre2 {
+    width: 300px !important;
+    height: 200px !important;
+    border-radius: 5px;
+}
+
+a{
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.card:hover {
+    box-shadow: 17px 16px 16px -4px rgba(26,248,93,0.4);
+    -webkit-box-shadow: 17px 16px 16px -4px rgba(26,248,93,0.4);
+    -moz-box-shadow: 17px 16px 16px -4px rgba(26,248,93,0.4);
+transition: 0.5s;
+}
+
