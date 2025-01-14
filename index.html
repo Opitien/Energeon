@@ -1,390 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="Resources/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="shortcut icon" href="img/icons8-full-battery-3d-fluency-96.png" type="image/x-icon">
-    <title>Energeon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="Resources/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="shortcut icon" href="img/icons8-full-battery-3d-fluency-96.png" type="image/x-icon">
+  <title>Energeon</title>
 </head>
+
+<style>
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url(resources/fonts/Poppins/Poppins-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url(resources/fonts/Roboto/Roboto-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Bruno-Ace';
+    src: url(resources/fonts/Bruno_Ace/BrunoAce-Regular.ttf);
+  }
+  
+
+  body {
+    padding-top: 3rem;
+    margin: 0;
+    background:
+      linear-gradient(90deg, #000000, #1a1a1a);
+    transition: background-position 2s ease ease-in-out,
+      background-color 2s ease ease-in-out;
+    background-size: 200% 200%;
+  }
+
+  .energeon-link {
+    font-family: 'Poppins', "sans-serif" !important;
+    font-weight: 400;
+  }
+
+  .energeon-link-first {
+    font-family: 'Bruno-Ace', "sans-serif" !important;
+    font-weight: 400;
+  }
+
+  .nav-link:hover {
+    color: #32cd32 !important;
+  }
+
+  .m-button {
+    margin-left: -2em;
+  }
+
+  .navvy {
+    background: linear-gradient(90deg, #000000, #32cd32);
+    width: 100%;
+    height: auto;
+    overflow: hidden
+  }
+
+  h1, h2, h3 ,h3 ,h4 ,h5 ,h6 {
+    font-family: 'Bruno-Ace', "sans-serif" ;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: 'Roboto', "sans-serif";
+  }
+
+
+  section.main {
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    position: relative;
+    height: 650px;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
+
+  section.apple {
+    background: linear-gradient(90deg, #000000, #32cd32);
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .icons {
+    font-size: 2.5em;
+    color: #fff;
+  }
+
+  .message {
+    margin-top: 20px;
+    color: green;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .success {
+    opacity: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  footer {
+    background: linear-gradient(90deg, #000000, #32cd32);
+  }
+</style>
+
 <body>
-    
+  <header>
+    <nav class=" navvy navbar navbar-default navbar-expand-md navbar-dark fixed-top bg-success">
+      <div class="container-fluid">
+        <span><img src="" alt="" class="img-fluid"></span>
+        <a class="energeon-link-first navbar-brand ms-3" href="#">Energeon</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 energeon-link">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#energizing">Energizing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#store">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <nav class="navbar navbar-expand-lg bg-light fixed-top" id="#home">
-        <div class="container">
-          <a class="energeon" href="#">Energeon</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-hamburger"></i></span>
+  <main>
+    <section id="home" class="main">
+      <div class="container my-5 ">
+        <div class="position-relative p-5 text-center text-white">
+          <h1>Energeon</h1>
+          <p class="col-lg-6 mx-auto mb-4">
+            Energizing Your Life With More Healthy Options
+          </p>
+          <button class="btn btn-success px-5 mb-5" type="button">
+            More Tips
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#energizing">Energizing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Energectic</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#store">Store</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn0" type="submit">Search</button>
-            </form>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="energizing" class="energizing">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-lg-5 m-auto text-center">
+            <h1 class="text-white">What's Energizing</h1>
+            <h6 class="text-success">Eat Healthy & Appreciate Nature</h6>
           </div>
         </div>
-      </nav>
 
-      <section id="home" class="main" >
-        <div class="container py-5">
-          <div class="row py-4">
-            <div class="col-lg-6 pt-5 text-center">
-              <h1>Energizing Your Life With Healthy Options</h1>
-              <button class="btn1 mt-3">More Tips</button>
+        <div class="row mb-3">
+          <div class="col-lg-4 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/alphamalestack.png" class="img-fluid" alt="">
+              </div>
             </div>
+            <h6 class="mt-2">Alpha Male Stack</h6>
+            <p>$27.99</p>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            <h6 class="mt-2">Complete Detox Cleanse Stack</h6>
+            <p>$30.99</p>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            <h6 class="mt-2">Complete Protein Stack</h6>
+            <p>$20.99</p>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-6 text-center m-auto">
+            <button class="btn btn-success px-5 mb-5">
+              Click for More
+            </button>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="energizing" class="new py-5">
-        <div class="container pt-5">
-          <div class="row">
-            <div class="col-lg-7 m-auto">
-              <div class="row text-center">
-                <div class="col-4">
-                  <img src="./img/banana.png" class="img-fluid imgtre" alt="">
-                  <h6 class="mt-2">ORGANIC</h6>
-                </div>
-                <div class="col-4">
-                  <img src="./img/apple.png" class="img-fluid imgtre" alt="">
-                  <h6 class="mt-2">NATURAL</h6>
-                </div>
-                <div class="col-4">
-                  <img src="./img/mango.png" class="img-fluid imgtre" alt="">
-                  <h6 class="mt-2">NUTRIOUS</h6>
-                </div>
-              </div>
-            </div>
+    <section id="about" class="about">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-lg-8 m-auto text-center">
+            <h1 class="text-white">Explore our Energectic Community</h1>
+            <h6 class="text-success"> Energetic And Natural Products</h6>
           </div>
         </div>
-      </section>
 
-      <section id="energizing" class="product">
-        <div class="container py-5">
-          <div class="row py-5">
-            <div class="col-lg-5 m-auto text-center">
-              <h1>What's Energizing</h1>
-              <h6 style="color: green;">Eat Healthy & Appreciate Nature</h6>
-            </div>
+        <div class="row">
+          <div class="col-lg-4 container text-white">
+            <img src="./img/phresh-superblends.png" class="img-fluid mb-3 img-about" alt="">
+            <h5> PHresh Superblends </h5>
+            <p>From Energeon these are a powerhouse of nutrients, packed with vitamins, minerals, and superfoods to fuel
+              your wellness journey.</p>
           </div>
 
-          <div class="row">
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/alphamalestack.png" class="img-fluid" alt="">
-                </div>
-              </div>
-              <h6 class="mt-2">Alpha Male Stack</h6>
-              <p>$27.99</p>
-            </div>
-
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
-                </div>
-              </div>
-              <h6 class="mt-2">Complete Detox Cleanse Stack</h6>
-              <p>$30.99</p>
-            </div>
-
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
-                </div>
-              </div>
-              <h6 class="mt-2">Complete Protein Stack</h6>
-              <p>$20.99</p>
-            </div>
-
+          <div class="col-lg-4 container text-white">
+            <img src="./img/supergreens.png" class="img-fluid mb-3 img-about" alt="">
+            <h5>Super Greens</h5>
+            <p>From Energeon are packed with nutrient-rich greens like spinach, kale, and spirulina, offering a natural
+              energy boost while supporting detox.</p>
           </div>
-          <div class="row">
-            <div class="col-lg-6 text-center m-auto">
-              <button class="btn1">
-                Click for More
-              </button>
-            </div>
+
+          <div class="col-lg-4 container text-white">
+            <img src="./img/extend-release-magnessium.png" class="img-fluid mb-3 img-about" alt="">
+            <h5>Extent Release Magnessium</h5>
+            <p>From Energeon offers a slow, steady release of magnesium throughout the day,helping to support muscle
+              relaxation, improve sleep.</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 text-center m-auto">
+            <button class="btn btn-success px-5 mb-5">Shop More</button>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about" class="about">
-        <div class="container py-5">
-          <div class="row py-5">
-            <div class="col-lg-8 m-auto text-center">
-              <h1>Explore our Energectic Community</h1>
-              <h6 style="color:green"> Energetic And Natural Products</h6>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="./img/phresh-superblends.png" class="img-fluid mb-3 imgtre2" alt="">
-              <h5> PHresh Superblends </h5>
-              <p><i>
-                 From Energeon these are a powerhouse of nutrients, packed with vitamins, minerals,
-                 and superfoods to fuel your wellness journey.
-              </i></p>
-            </div>
-  
-            <div class="col-lg-4">
-              <img src="./img/supergreens.png" class="img-fluid mb-3 imgtre2" alt="">
-              <h5>Super Greens</h5>
-              <p><i>
-                From Energeon are packed with nutrient-rich greens like spinach, kale, 
-                and spirulina, offering a natural energy boost while supporting detox.
-              </i></p>
-            </div>
-
-            <div class="col-lg-4">
-              <img src="./img/extend-release-magnessium.png" class="img-fluid mb-3 imgtre2" alt="">
-              <h5>Extent Release Magnessium</h5>
-              <p><i>
-                 From Energeon offers a slow, steady release of magnesium throughout the day,
-                 helping to support muscle relaxation, improve sleep.
-              </i></p>
-            </div>
-
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6 text-center m-auto">
-              <button class="btn1">Shop More</button>
-            </div>
+    <section id="store" class="shop">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-lg-8 m-auto text-center">
+            <h1 class="text-white">Explore our Energy Bank</h1>
+            <h6 class="text-success"> Pick Your Desired Product From Our Cells</h6>
           </div>
         </div>
-      </section>
 
-      <section id="store" class="shop">
-        <div class="container">
-          <div class="row py-5">
-            <div class="col-lg-8 m-auto text-center">
-              <h1>Explore our Energy Bank</h1>
-              <h6 style="color:green"> Pick Your Desired Product From Our Cells</h6>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/alphamalestack.png" class="img-fluid" alt="">
+              </div>
             </div>
+            <h6>Apha Male Stack</h6>
+            <p>$27.99</p>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/alphamalestack.png" class="img-fluid" alt="">
-                </div>
-              </div>
-              <h6>Apha Male Stack</h6>
-              <p>$27.99</p>
-            </div>
 
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
-                </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
               </div>
-              <h6>Complete Detox Cleanse Stack</h6>
-              <p>$30.99</p>
             </div>
+            <h6>Complete Detox Cleanse Stack</h6>
+            <p>$30.99</p>
+          </div>
 
-            <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-              <div class="card">
-                <div class="card-body border-o bg-light">
-                  <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
-                </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
               </div>
-              <h6>Compete Protein Stack</h6>
-              <p>$17.99</p>
             </div>
+            <h6>Compete Protein Stack</h6>
+            <p>$17.99</p>
+          </div>
 
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            <h6>Complete Protein Stack</h6>
+            <p>$17.99</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            <h6>Complete Detox Cleanse Stack</h6>
+            <p>$30.99</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center text-white mb-2">
+            <div class="card">
+              <div class="card-body border-o bg-light">
+                <img src="./img/alphamalestack.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            <h6>Alpha Male Stack</h6>
+            <p>$27.99</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="apple py-5 mb-3">
+      <div class="container text-white pt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="font-weight-bold py-3">Boost Your Health With An Energy Refill</h1>
+            <h6></h6>
+            <button class="btn btn-success px-5 mb-5">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 m-auto text-center">
+            <h1 class="text-white">Contact Us</h1>
+            <h6 class="text-success">Always Be In Sync With Our Energy</h6>
+          </div>
+        </div>
+        <div class="row py-5">
+          <div class="col-lg-9 m-auto">
             <div class="row">
-              <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                <div class="card">
-                  <div class="card-body border-o bg-light">
-                    <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
-                  </div>
-                </div>
-                <h6>Complete Protein Stack</h6>
-                <p>$17.99</p>
-              </div>
-  
-              <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                <div class="card">
-                  <div class="card-body border-o bg-light">
-                    <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
-                  </div>
-                </div>
-                <h6>Complete Detox Cleanse Stack</h6>
-                <p>$30.99</p>
-              </div>
-  
-              <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                <div class="card">
-                  <div class="card-body border-o bg-light">
-                    <img src="./img/alphamalestack.png" class="img-fluid" alt="">
-                  </div>
-                </div>
-                <h6>Alpha Male Stack</h6>
-                <p>$27.99</p>
+              <div class="col-lg-4 text-white">
+                <h6>LOCATION</h6>
+                <P>1234 Energy Avenue DC USA</P>
+
+                <h6>PHONE</h6>
+                <P>10100100101</P>
+
+                <h6>EMAIL</h6>
+                <P>energeon@energy.com</P>
               </div>
 
-              <div class="row">
-                <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                  <div class="card">
-                    <div class="card-body border-o bg-light">
-                      <img src="./img/completedetoxcleansestack.png" class="img-fluid" alt="">
-                    </div>
-                  </div>
-                  <h6>Complete Detox Cleanse Stack</h6>
-                  <p>$30.99</p>
-                </div>
-    
-                <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                  <div class="card">
-                    <div class="card-body border-o bg-light">
-                      <img src="./img/alphamalestack.png" class="img-fluid" alt="">
-                    </div>
-                  </div>
-                  <h6>Alpha Male Stack</h6>
-                  <p>$27.99</p>
-                </div>
-    
-                <div class="col-lg-4 col-md- 6 col-sm-12 text-center mb-2">
-                  <div class="card">
-                    <div class="card-body border-o bg-light">
-                      <img src="./img/completeProteinstack.png" class="img-fluid" alt="">
-                    </div>
-                  </div>
-                  <h6>Complete Protein Stack</h6>
-                  <p>$17.99</p>
-                </div>
-
-
-
-          </div>
-        </div>
-      </section>
-
-      <section class="apple py-5">
-        <div class="container text-white pt-5">
-          <div class="row">
-            <div class="col-lg-6">
-              <h1 class="font-weight-bold py-3">Boost Your Health With An Energy Refill</h1>
-              <h6 style="color: green;"></h6>
-              <button class="btn1 mt-3">Shop Now</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 m-auto text-center">
-              <h1>Contact Us</h1>
-              <h6 style="color: green;">Always Be In Sync With Our Energy</h6>
-            </div>
-          </div>
-          <div class="row py-5">
-            <div class="col-lg-9 m-auto">
-              <div class="row">
-                <div class="col-lg-4">
-                  <h6>LOCATION</h6>
-                  <P>1234 Energy Avenue DC USA</P>
-
-                  <h6>PHONE</h6>
-                  <P>10100100101</P>
-
-                  <h6>EMAIL</h6>
-                  <P>energeon@energy.com</P>
-                </div>
-                <div class="col-lg-7">
+              <div class="col-lg-7">
+                <form id="contactForm" method="get">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <input type="text" class="form-control bg-light" placeholder="First Name">
+                    <div class="col-lg-6 col-sm-4">
+                      <input type="text" class="form-control bg-light" id="firstName" placeholder="First Name" required>
                     </div>
-
-                    <div class="col-lg-6">
-                      <input type="text" class="form-control bg-light" placeholder="Last Name">
+                    <div class="col-lg-6 col-sm-4">
+                      <input type="text" class="form-control bg-light" id="secondName" placeholder="Last Name" required>
                     </div>
-
                   </div>
-
                   <div class="row">
                     <div class="col-lg-12 py-3">
-                      <textarea name="" class="form-control bg-light" cols="10" rows="5" placeholder="Enter Your Message"></textarea>
+                      <textarea class="form-control bg-light" id="message-input" cols="10" rows="5"
+                        placeholder="Enter Your Message" required></textarea>
                     </div>
                   </div>
-                  <button class="btn1 mt-3">Energy Ping 📩</button>
-                </div>
+                  <button type="submit" class="btn btn-success px-5 mb-5 submitBtn">Energy Ping 📩</button>
+                </form>
+                <div class="message" id="message"></div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      </div>
+    </section>
+  </main>
 
-      <section class="news py-3">
-        <div class="container py-3">
-          <div class="row">
-            <div class="col-lg-9 m-auto text-center mb-3">
-              <h1>Connect with Our Energy Society</h1>
-              <input type="text" class="px-3" placeholder="Enter your email">
-              <button class="btn2">Energy Ping</button>
+  <footer>
+    <section class="py-3">
+      <div class="container mt-3">
+        <h2 class="text-center text-white mb-4">Subscribe to Our Newsletter</h2>
+        <form>
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                <div class="input-group-append">
+                  <button class="btn btn-success m-button" type="submit">Subscribe</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-11">
-              <div class="row">
+        </form>
 
-                <div class="col-lg-3 py-3">
-                  <h5 class="pb-3">CUSTOMER CARE</h5>
+        <div class="row">
+          <div class="col-lg-11">
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 col-sm-6 py-3">
+                <h5 class="text-white pb-3">CUSTOMER CARE</h5>
+                <span class="text-white">
                   <p>24/7 Service</p>
                   <p>Support</p>
                   <p>Accountability</p>
                   <p>Authenticity</p>
-                </div>
+                </span>
+              </div>
 
-                <div class="col-lg-3 py-3">
-                  <h5 class="pb-3">Energy FAQ's</h5>
+              <div class="col-lg-3 col-md-6 col-sm-6 py-3">
+                <h5 class="text-white pb-3">Energy FAQ's</h5>
+                <span class="text-white">
                   <p>No E-Charges</p>
                   <p>Home Delivery</p>
                   <p>Quality Assurance</p>
                   <p>Insurance</p>
-                </div>
+                </span>
+              </div>
 
-                <div class="col-lg-3 py-3">
-                  <h5 class="pb-3">OUR COMPANY</h5>
-                  <p><a href="#home">Home</a></p>
-                  <p><a href="#energizing">Energizing</a></p>
-                  <p><a href="#store">Store</a></p>
-                  <p><a href="#about">Energetic</a></p>
-                </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 py-3">
+                <h5 class="text-white pb-3">OUR COMPANY</h5>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#energizing">Energizing</a></p>
+                <p><a href="#about">Energetic</a></p>
+                <p><a href="#store">Store</a></p>
+              </div>
 
-                <div class="col-lg-3 py-3">
-                  <h5 class="pb-3">CUSTOMER CARE</h5>
+              <div class="col-lg-3 col-sm-6 py-3">
+                <h5 class="text-white pb-3">CUSTOMER CARE</h5>
+                <span class="icons">
                   <a href="https://www.facebook.com" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                   <a href="https://www.twitter.com" target="_blank">
-                    <i class="fab fa-twitter"></i> 
+                    <i class="fab fa-twitter"></i>
                   </a>
                   <a href="https://www.instagram.com" target="_blank">
                     <i class="fab fa-instagram"></i>
@@ -392,16 +470,23 @@
                   <a href="https://www.linkedin.com" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
-                </div>
-                </div>
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      </div>
+    </section>
+  </footer>
 
-      
- <script src="Resources/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
