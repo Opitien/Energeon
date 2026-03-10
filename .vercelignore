@@ -1,13 +1,11 @@
-# Ignore legacy HTML/CSS/JS files
+# Ignore old files
+old.energeon/
 index.html
 script.js
-README.md
-
-# Ignore old resource folders
-img/
 resources/
+img/
 
-# Optional: ignore other old builds or temp files
+# Ignore local dev and build
+node_modules/
+.next/
 *.log
-*.tmp
-*.bak
