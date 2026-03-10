@@ -1,0 +1,10 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+.centerActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
