@@ -1,6 +1,13 @@
-# Ignore old static files
-img/
-resources/
+# Ignore legacy HTML/CSS/JS files
 index.html
 script.js
 README.md
+
+# Ignore old resource folders
+img/
+resources/
+
+# Optional: ignore other old builds or temp files
+*.log
+*.tmp
+*.bak
