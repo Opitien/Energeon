@@ -1,0 +1,6 @@
+# Ignore old static files
+img/
+resources/
+index.html
+script.js
+README.md
